@@ -3,6 +3,7 @@ const barra = document.getElementById("barra");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const text = document.getElementById("text");
+const img = document.getElementById("img");
 
 let currentStep = 1;
 nextButton.addEventListener("click", () => {
@@ -45,15 +46,27 @@ function addTexts() {
   switch (currentStep) {
     case 2:
       text.innerText = "Paso dos";
+      img.innerHTML = `
+        <img class="img1" src="./IMG/1.jpg" alt="">
+      `;
       break;
     case 3:
       text.innerText = "Paso tres";
+      img.innerHTML = `
+        <img class="img2" src="./IMG/2.jpg" alt="">
+      `;
       break;
     case 4:
       text.innerText = "Paso cuatro";
+      img.innerHTML = `
+        <img class="img3" src="./IMG/3.jpg" alt="">
+      `;
       break;
     case 1:
       text.innerText = "Paso uno";
+      img.innerHTML = `
+        <img class="img4" src="./IMG/4.jpg" alt="">
+      `;
       break;
   }
 }
